@@ -1,27 +1,41 @@
-# Zizo.2bd.net
+# 🌐 Zizo.2bd.net
 
-The official project hub for Zizo.
+> 💻 The official project hub for Zizo.
 
-## Projects
+## 🚀 Projects
 
-- [KRNL-DOS](https://krnlx.zizo.2bd.net)
-- [Cubix](https://cubix.zizo.2bd.net)
-- [ZClient](https://zclient.zizo.2bd.net)
-- [Verity](https://verity.zizo.2bd.net)
-- [ZGPT](https://zgpt.zizo.2bd.net)
+- 🖥️ [KRNL-DOS](https://krnlx.zizo.2bd.net)
+- 🧊 [Cubix](https://cubix.zizo.2bd.net)
+- ⚔️ [ZClient](https://zclient.zizo.2bd.net)
+- 🤖 [Verity](https://verity.zizo.2bd.net)
+- 🧠 [ZGPT](https://zgpt.zizo.2bd.net)
 
-## About
+## 🧪 About
 
 This is the main website for my projects, experiments, and other things I build.
 
-## License
+💡 New projects will get their own subdomain under `zizo.2bd.net`.
 
-All Rights Reserved.
+## 🛠️ Built With
 
-Copyright (c) 2026 Zizo
+- 🌐 HTML
+- 🎨 CSS
+- ⚡ JavaScript
 
-You may view and access this project for personal, non-commercial purposes.
+## 🔒 License
 
-You may not copy, modify, redistribute, republish, sublicense, sell, or commercially use this project or its source code without explicit permission from Zizo.
+**All Rights Reserved.**
 
-See [LICENSE](LICENSE) for the full terms.
+Copyright © 2026 Zizo
+
+👀 You may view and access this project for personal, non-commercial purposes.
+
+🚫 You may not copy, modify, redistribute, republish, sublicense, sell, or commercially use this project or its source code without explicit permission from Zizo.
+
+See [`LICENSE`](LICENSE) for the full terms.
+
+---
+
+💻 **Made by Zizo**
+
+> 🔨 Build. Break. Fix. Repeat.
