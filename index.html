@@ -1,210 +1,440 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Zizo.2bd.net</title>
-    <meta name="description" content="Zizo's personal project hub.">
+    <title>Z Corp.</title>
+
+    <meta
+        name="description"
+        content="Z Corp. — Building software, games, experiments, and things that shouldn't exist."
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
     <header class="navbar">
-        <a href="#" class="logo">Zizo<span>.2bd.net</span></a>
+        <div class="nav-container">
 
-        <button id="themeButton" class="theme-button" aria-label="Toggle theme">
-            🌙
-        </button>
+            <a href="/" class="logo">
+                Z<span>Corp.</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#products">Products</a>
+                <a href="#divisions">Divisions</a>
+                <a href="/hall-of-fame.html">Hall of Fame</a>
+                <a href="#about">About</a>
+            </nav>
+
+            <button id="theme-toggle" class="theme-button" aria-label="Toggle theme">
+                ◐
+            </button>
+
+        </div>
     </header>
 
+
+    <!-- =========================
+         HERO
+    ========================== -->
     <main>
 
         <section class="hero">
-            <div class="badge">💻 Zizo's Project Hub</div>
 
-            <h1>
-                Welcome to<br>
-                <span>Zizo.2bd.net</span>
-            </h1>
+            <div class="hero-content">
 
-            <p>
-                A home for my coding projects, experiments,
-                and whatever I'm building next. 🚀
-            </p>
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    Z CORP. ONLINE
+                </div>
 
-            <div class="hero-buttons">
-                <a href="#projects" class="button primary">
-                    🚀 View Projects
-                </a>
+                <h1>
+                    Welcome to<br>
+                    <span>Z Corp.</span>
+                </h1>
 
-                <a href="#about" class="button secondary">
-                    👋 About
-                </a>
+                <p class="hero-subtitle">
+                    We build software, games, experiments, and technology
+                    that make the internet a little more interesting.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#products" class="button primary">
+                        Explore Products
+                    </a>
+
+                    <a href="#about" class="button secondary">
+                        About Z Corp.
+                    </a>
+                </div>
+
             </div>
+
+            <div class="hero-decoration">
+                <div class="orb orb-one"></div>
+                <div class="orb orb-two"></div>
+                <div class="orb orb-three"></div>
+                <div class="grid-lines"></div>
+            </div>
+
         </section>
 
 
-        <section id="projects" class="section">
+        <!-- =========================
+             PRODUCTS
+        ========================== -->
+        <section id="products" class="section">
 
             <div class="section-heading">
-                <span>🚀</span>
-                <h2>Projects</h2>
+                <span class="section-label">01 / PRODUCTS</span>
+
+                <h2>
+                    Things we're building.
+                </h2>
+
+                <p>
+                    Software, games, tools, and experiments created under Z Corp.
+                </p>
             </div>
 
-            <div class="project-grid">
 
-                <div class="project-card">
-                    <div class="project-icon">🖥️</div>
+            <div class="product-grid">
 
-                    <h3>KRNL-DOS</h3>
+                <article class="product-card featured">
+                    <div class="product-number">01</div>
+
+                    <div class="product-icon">⌕</div>
+
+                    <h3>Z Search</h3>
 
                     <p>
-                        A custom operating system project.
+                        A search experience built from the ground up by Z Corp.
                     </p>
 
-                    <span class="status">
-                        🔨 In development
-                    </span>
-                </div>
+                    <a href="#" class="product-link">
+                        Explore →
+                    </a>
+                </article>
 
 
-                <div class="project-card">
-                    <div class="project-icon">🧊</div>
+                <article class="product-card">
+                    <div class="product-number">02</div>
+
+                    <div class="product-icon">◆</div>
 
                     <h3>Cubix</h3>
 
                     <p>
-                        A voxel game project built for experimenting
-                        with game development.
+                        A voxel game built with Java, OpenGL, and LWJGL.
                     </p>
 
-                    <span class="status">
-                        🔨 In development
-                    </span>
-                </div>
+                    <a href="#" class="product-link">
+                        Explore →
+                    </a>
+                </article>
 
 
-                <div class="project-card">
-                    <div class="project-icon">⚔️</div>
+                <article class="product-card">
+                    <div class="product-number">03</div>
+
+                    <div class="product-icon">Z</div>
 
                     <h3>ZClient</h3>
 
                     <p>
-                        A Minecraft client project focused on
-                        performance and customization.
+                        A Minecraft client focused on performance,
+                        customization, and a better experience.
                     </p>
 
-                    <span class="status">
-                        🔨 In development
-                    </span>
-                </div>
+                    <a href="#" class="product-link">
+                        Explore →
+                    </a>
+                </article>
 
 
-                <div class="project-card">
-                    <div class="project-icon">🤖</div>
+                <article class="product-card">
+                    <div class="product-number">04</div>
+
+                    <div class="product-icon">◉</div>
 
                     <h3>Verity</h3>
 
                     <p>
-                        An AI assistant experiment with voice
-                        and interactive responses.
+                        A desktop companion designed to experiment with
+                        interactive software.
                     </p>
 
-                    <span class="status">
-                        🧪 Experimental
-                    </span>
-                </div>
+                    <a href="#" class="product-link">
+                        Explore →
+                    </a>
+                </article>
 
 
-                <div class="project-card">
-                    <div class="project-icon">🧠</div>
+                <article class="product-card">
+                    <div class="product-number">05</div>
+
+                    <div class="product-icon">✦</div>
 
                     <h3>ZGPT</h3>
 
                     <p>
-                        An AI assistant project.
+                        An experimental AI project exploring what
+                        personal software can become.
                     </p>
 
-                    <span class="status">
-                        🧪 Experimental
-                    </span>
-                </div>
+                    <a href="#" class="product-link">
+                        Explore →
+                    </a>
+                </article>
 
 
-                <div class="project-card coming-soon">
-                    <div class="project-icon">🧪</div>
+                <article class="product-card coming-soon">
 
-                    <h3>More coming soon</h3>
+                    <div class="product-number">06</div>
+
+                    <div class="product-icon">?</div>
+
+                    <h3>Classified</h3>
 
                     <p>
-                        New projects will appear here when they're ready.
+                        Something is being developed here.
                     </p>
 
-                    <span class="status">
-                        🚧 Coming soon
+                    <span class="classified-label">
+                        ACCESS RESTRICTED
                     </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DIVISIONS
+        ========================== -->
+        <section id="divisions" class="section divisions-section">
+
+            <div class="section-heading">
+                <span class="section-label">02 / DIVISIONS</span>
+
+                <h2>
+                    More than just software.
+                </h2>
+
+                <p>
+                    Z Corp. operates across multiple creative and technical
+                    divisions.
+                </p>
+            </div>
+
+
+            <div class="division-grid">
+
+                <div class="division">
+                    <span class="division-icon">🎮</span>
+
+                    <div>
+                        <h3>Z Games</h3>
+                        <p>
+                            Games, engines, mechanics, and interactive worlds.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="division">
+                    <span class="division-icon">💻</span>
+
+                    <div>
+                        <h3>Z Software</h3>
+                        <p>
+                            Applications, tools, clients, and utilities.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="division">
+                    <span class="division-icon">🎬</span>
+
+                    <div>
+                        <h3>Zizo Productions</h3>
+                        <p>
+                            Animation, branding, videos, and creative projects.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="division">
+                    <span class="division-icon">🧪</span>
+
+                    <div>
+                        <h3>Z Labs</h3>
+                        <p>
+                            Experimental projects that may or may not become
+                            something bigger.
+                        </p>
+                    </div>
                 </div>
 
             </div>
+
         </section>
 
 
-        <section id="about" class="section about">
+        <!-- =========================
+             HALL OF FAME
+        ========================== -->
+        <section class="section hall-section">
+
+            <div class="hall-content">
+
+                <span class="section-label">03 / HALL OF FAME</span>
+
+                <h2>
+                    Some people become part of Z Corp. history.
+                </h2>
+
+                <p>
+                    The Hall of Fame recognizes people who discover,
+                    contribute to, or become part of something special.
+                </p>
+
+                <a href="/hall-of-fame.html" class="button secondary">
+                    Enter Hall of Fame →
+                </a>
+
+            </div>
+
+            <div class="hall-symbol">
+                ★
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ARG
+        ========================== -->
+        <section class="section classified-section">
+
+            <div class="classified-box">
+
+                <div class="classified-top">
+                    <span>⚠ Z CORP. INTERNAL</span>
+                    <span>FILE #0001</span>
+                </div>
+
+                <div class="classified-content">
+
+                    <span class="section-label">
+                        04 / ????
+                    </span>
+
+                    <h2>
+                        Something is missing.
+                    </h2>
+
+                    <p>
+                        Not everything on this website is what it appears
+                        to be.
+                    </p>
+
+                    <a href="#" class="classified-link">
+                        Investigate →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+        <section id="about" class="section about-section">
 
             <div class="section-heading">
-                <span>👋</span>
-                <h2>About</h2>
+
+                <span class="section-label">05 / ABOUT</span>
+
+                <h2>
+                    What is Z Corp.?
+                </h2>
+
             </div>
 
-            <div class="about-box">
-                <p>
-                    I'm Zizo, a hobby coder who enjoys building things
-                    just because I can. 💻
+            <div class="about-content">
+
+                <p class="about-large">
+                    Z Corp. is an independent creative technology company
+                    focused on building software, games, experiments,
+                    and digital experiences.
                 </p>
 
                 <p>
-                    This domain is the central home for my projects,
-                    experiments, and future creations.
+                    From game development to applications, animation,
+                    experimentation, and everything in between, Z Corp.
+                    is a place to build ideas that don't fit anywhere else.
                 </p>
+
             </div>
 
         </section>
 
 
+        <!-- =========================
+             TERMINAL
+        ========================== -->
         <section class="terminal-section">
 
             <div class="terminal">
 
-                <div class="terminal-top">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
+                <div class="terminal-header">
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-title">
+                        zcorp-terminal
+                    </span>
                 </div>
 
                 <div class="terminal-body">
-                    <p>
-                        <span class="prompt">zizo@2bd</span>:~$ whoami
-                    </p>
-
-                    <p class="output">
-                        hobby_coder
-                    </p>
 
                     <p>
-                        <span class="prompt">zizo@2bd</span>:~$ echo "Hello, world!"
+                        <span class="terminal-prompt">$</span>
+                        zcorp status
                     </p>
 
-                    <p class="output">
-                        Hello, world! 👋
+                    <p class="terminal-output">
+                        Z Corp. systems operational.
                     </p>
 
                     <p>
-                        <span class="prompt">zizo@2bd</span>:~$
-                        <span class="cursor">█</span>
+                        <span class="terminal-prompt">$</span>
+                        zcorp projects
                     </p>
+
+                    <p class="terminal-output">
+                        Projects detected: 6
+                    </p>
+
+                    <p>
+                        <span class="terminal-prompt">$</span>
+                        _
+                    </p>
+
                 </div>
 
             </div>
@@ -214,9 +444,48 @@
     </main>
 
 
-    <footer>
-        <p>💻 Built by Zizo</p>
-        <p>© 2026 Zizo · zizo.2bd.net</p>
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    Z<span>Corp.</span>
+                </div>
+
+                <p>
+                    Building things that shouldn't exist.
+                </p>
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#products">Products</a>
+                <a href="#divisions">Divisions</a>
+                <a href="/hall-of-fame.html">Hall of Fame</a>
+                <a href="#about">About</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Z Corp. All rights reserved.
+            </span>
+
+            <span>
+                Z Corp. / Zizo Productions
+            </span>
+
+        </div>
+
     </footer>
 
 
@@ -224,3 +493,4 @@
 
 </body>
 </html>
+```
