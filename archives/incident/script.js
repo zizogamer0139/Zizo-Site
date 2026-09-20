@@ -1,159 +1,206 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-	const year = document.getElementById("year");
-	const terminal = document.getElementById("terminal");
-	const classifiedBox = document.querySelector(".classified-box");
+// ==========================================
+// Z CORP — INCIDENT Z-17
+// ==========================================
 
 
-	/* =========================
-	   YEAR
-	   ========================= */
+// YEAR
+const year = document.getElementById("year");
 
-	if (year) {
-		year.textContent = new Date().getFullYear();
-	}
-
-
-	/* =========================
-	   TERMINAL EVENTS
-	   ========================= */
-
-	if (terminal) {
-
-		const events = [
-			"Checking incident log integrity...",
-			"WARNING: checksum mismatch.",
-			"Searching recovered fragments...",
-			"1 fragment located.",
-			"Fragment status: UNREADABLE."
-		];
-
-		let index = 0;
-
-		const addEvent = () => {
-
-			if (index >= events.length) {
-				return;
-			}
-
-			const line = document.createElement("div");
-
-			line.className = "output";
-
-			line.textContent = events[index];
-
-			terminal.insertBefore(
-				line,
-				terminal.lastElementChild
-			);
-
-			index++;
-
-			setTimeout(addEvent, 950);
-		};
-
-		setTimeout(addEvent, 1200);
-	}
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
 
 
-	/* =========================
-	   CLASSIFIED INTERACTION
-	   ========================= */
+// ==========================================
+// RECOVERED TERMINAL
+// ==========================================
 
-	if (classifiedBox) {
+const terminal = document.getElementById("terminal");
 
-		classifiedBox.addEventListener("click", () => {
-
-			classifiedBox.classList.toggle("selected");
-
-			if (classifiedBox.classList.contains("selected")) {
-
-				console.log("%cZ CORP SECURITY", "font-size: 18px; font-weight: bold;");
-				console.log("%cIncident Z-17 selected.", "color: #ff3838;");
-				console.log("%cThere is still one recovered fragment.", "color: #888;");
-				console.log("%cSearch the record carefully.", "color: #888;");
-
-			}
-
-		});
-
-	}
+const terminalLines = [
+    "[02:17:43] unauthorized access detected",
+    "[02:17:44] archive security protocol initiated",
+    "[02:18:01] system lockdown confirmed",
+    "[02:18:07] external connection: NOT FOUND",
+    "[02:19:26] archive data integrity failure",
+    "[02:19:29] recovery attempt initiated",
+    "[02:20:41] recovery attempt failed",
+    "[02:21:09] unknown process detected",
+    "[02:21:10] process identifier: UNKNOWN",
+    "[02:21:11] incident logger degraded",
+    "[02:21:12] searching for preserved records...",
+    "[02:21:13] 1 RECORD FOUND"
+];
 
 
-	/* =========================
-	   SECURITY CONSOLE
-	   ========================= */
-
-	console.log(
-		"%cZ CORP. SECURITY CORE",
-		"font-size: 18px; font-weight: 700;"
-	);
-
-	console.log(
-		"%cINCIDENT Z-17",
-		"color: #ff3838; font-weight: bold;"
-	);
-
-	console.log(
-		"%cUnauthorized access detected.",
-		"color: #888;"
-	);
-
-	console.log(
-		"%cOne record remains.",
-		"color: #888;"
-	);
+let terminalIndex = 0;
 
 
-	/* =========================
-	   RANDOM SYSTEM GLITCH
-	   ========================= */
+function writeTerminalLine() {
 
-	const status = document.querySelector(".security-status");
-
-	if (status) {
-
-		setInterval(() => {
-
-			if (Math.random() > 0.95) {
-
-				status.style.opacity = "0.25";
-
-				setTimeout(() => {
-					status.style.opacity = "";
-				}, 100);
-
-			}
-
-		}, 1400);
-
-	}
+    if (!terminal || terminalIndex >= terminalLines.length) {
+        return;
+    }
 
 
-	/* =========================
-	   SECRET KEYBOARD EVENT
-	   ========================= */
+    const line = document.createElement("div");
 
-	let sequence = "";
+    line.className = "terminal-line";
 
-	document.addEventListener("keydown", (event) => {
+    line.textContent = terminalLines[terminalIndex];
 
-		sequence += event.key.toLowerCase();
+    terminal.appendChild(line);
 
-		if (sequence.length > 12) {
-			sequence = sequence.slice(-12);
-		}
+    terminalIndex++;
 
-		if (sequence.includes("zcorp")) {
 
-			console.log(
-				"%cSECURITY OVERRIDE DETECTED",
-				"color: #ff3838; font-size: 16px; font-weight: bold;"
-			);
+    setTimeout(writeTerminalLine, 260);
+}
 
-			sequence = "";
-		}
 
-	});
+setTimeout(writeTerminalLine, 500);
+
+
+// ==========================================
+// HIDDEN RECORD
+// ==========================================
+
+const classifiedBox = document.getElementById("classifiedBox");
+
+const redactedRows = document.querySelectorAll(".redacted");
+
+
+redactedRows.forEach((row) => {
+
+    row.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+
+        const value = row.dataset.value;
+
+        const valueElement = row.querySelector(".redacted-value");
+
+
+        if (!value || !valueElement) {
+            return;
+        }
+
+
+        // Already revealed
+        if (row.classList.contains("revealed")) {
+            return;
+        }
+
+
+        valueElement.textContent = value;
+
+        row.classList.add("revealed");
+
+
+        console.log("[Z CORP] Classified fragment recovered:");
+        console.log(value);
+
+
+        // Special discovery
+        if (value === "ARCHIVE-03") {
+
+            console.log(
+                "[Z CORP] LOCATION IDENTIFIED: ARCHIVE-03"
+            );
+
+        }
+
+    });
+
+});
+
+
+// ==========================================
+// CLASSIFIED BOX
+// ==========================================
+
+if (classifiedBox) {
+
+    classifiedBox.addEventListener("click", () => {
+
+        classifiedBox.classList.toggle("selected");
+
+        console.log(
+            "[Z CORP] Restricted record inspected."
+        );
+
+    });
+
+}
+
+
+// ==========================================
+// SECURITY STATUS GLITCH
+// ==========================================
+
+const securityStatus = document.querySelector(".security-status");
+
+
+setInterval(() => {
+
+    if (!securityStatus) {
+        return;
+    }
+
+
+    if (Math.random() > 0.85) {
+
+        securityStatus.style.opacity = "0.35";
+
+
+        setTimeout(() => {
+
+            securityStatus.style.opacity = "1";
+
+        }, 80);
+
+    }
+
+}, 2000);
+
+
+// ==========================================
+// SECRET KEYBOARD CLUE
+// ==========================================
+
+let secretInput = "";
+
+const secretCode = "zcorp";
+
+
+document.addEventListener("keydown", (event) => {
+
+    secretInput += event.key.toLowerCase();
+
+
+    if (secretInput.length > secretCode.length) {
+
+        secretInput =
+            secretInput.slice(-secretCode.length);
+
+    }
+
+
+    if (secretInput === secretCode) {
+
+        console.log(
+            "%c[Z CORP] ACCESS STRING ACCEPTED",
+            "color:#6dff9b;font-weight:bold;"
+        );
+
+        console.log(
+            "%cONE RECORD REMAINS.",
+            "color:#ffd866;font-weight:bold;"
+        );
+
+        secretInput = "";
+
+    }
 
 });
